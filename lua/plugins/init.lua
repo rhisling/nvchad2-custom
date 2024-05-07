@@ -20,12 +20,16 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
-        "lua-language-server", "stylua",   --lua
-        "html-lsp", "css-lsp", "prettier", --html, css
-        "clangd", "clang-format",          --cpp
-        "gopls",                           --go
-        "pyright",                         --python
-        "rust-analyzer"                    --rust
+        "lua-language-server",
+        "stylua", --lua
+        "html-lsp",
+        "css-lsp",
+        "prettier", --html, css
+        "clangd",
+        "clang-format", --cpp
+        "gopls", --go
+        "pyright", --python
+        "rust-analyzer", --rust
       },
     },
   },
@@ -44,18 +48,24 @@ return {
         direction = "bottom",
         min_height = 25,
         max_height = 25,
-        default_detail = 1
+        default_detail = 1,
       },
     },
   },
-  --
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
+        "lua",
+        "vimdoc",
+        "html",
+        "css",
+        "cpp",
+        "go",
+        "rust",
+        "python",
+      },
+    },
+  },
 }
