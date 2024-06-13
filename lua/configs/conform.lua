@@ -3,6 +3,10 @@ local options = {
     lua = { "stylua" },
     -- Conform will run multiple formatters sequentially
     go = { "goimports", "gofmt" },
+
+    c = { "clang_format" },
+
+    cpp = { "clang_format" },
     -- Use a sub-list to run only the first available formatter
     javascript = { { "prettierd", "prettier" } },
     -- You can use a function here to determine the formatters dynamically
@@ -13,8 +17,28 @@ local options = {
         return { "isort", "black" }
       end
     end,
+
     -- css = { "prettier" },
     -- html = { "prettier" },
+  },
+
+  format = {
+    timeout_ms = 3000,
+    async = false, -- not recommended to change
+    quiet = false, -- not recommended to change
+  },
+
+  formatters = {
+    stylua = {
+      prepend_args = { "--column-width", "100", "--indent-type", "Spaces" },
+    },
+    clang_format = {
+      prepend_args = {
+        "--style",
+        "{BasedOnStyle: Google, Standard: c++17, IndentWidth: 4}",
+        -- "{BasedOnStyle: Google, Standard: c++17, ColumnLimit: 100, IndentWidth: 4}",
+      },
+    },
   },
 
   format_on_save = {
