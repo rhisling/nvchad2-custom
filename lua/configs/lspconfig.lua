@@ -20,3 +20,13 @@ lspconfig.tsserver.setup {
   on_init = nvlsp.on_init,
   capabilities = nvlsp.capabilities,
 }
+-- Zig
+lspconfig.zls.setup {
+  capabilities = nvlsp.capabilities,
+  on_attach = nvlsp.on_attach,
+  on_init = nvlsp.on_init,
+  cmd = { "zls" },
+  filetypes = { "zig", "zir" },
+  root_dir = lspconfig.util.root_pattern("zls.json", "build.zig", ".git"),
+  single_file_support = true,
+}
