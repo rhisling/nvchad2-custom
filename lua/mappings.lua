@@ -65,3 +65,14 @@ map({ "n", "v", "i", "t" }, "<C-b>", function()
     end,
   }
 end, { desc = "Build and Run file" })
+
+vim.keymap.set("n", "<leader>t", ":Neotree toggle<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>o", ":Neotree focus<CR>", { noremap = true, silent = true })
+
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function(data)
+    if vim.fn.isdirectory(data.file) == 1 then
+      require("neo-tree.command").execute { toggle = true, dir = data.file }
+    end
+  end,
+})
