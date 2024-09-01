@@ -14,23 +14,6 @@ return {
     end,
   },
   --
-  {
-    "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "lua-language-server",
-        "stylua", --lua
-        "html-lsp",
-        "css-lsp",
-        "prettier", --html, css
-        "clangd",
-        "clang-format", --cpp
-        "gopls", --go
-        "pyright", --python
-        "rust-analyzer", --rust
-      },
-    },
-  },
   { -- This plugin
     "Zeioth/compiler.nvim",
     cmd = { "CompilerOpen", "CompilerToggleResults", "CompilerRedo" },

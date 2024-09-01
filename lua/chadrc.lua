@@ -55,6 +55,7 @@ local sep_style = "round"
 local sep_icons = utils.separators
 local separators = sep_icons[sep_style]
 local sep_r = separators["right"]
+
 M.ui = {
   nvdash = {
     load_on_startup = true,
@@ -82,6 +83,21 @@ M.ui = {
         local mode_sep1 = "%#St_" .. modes[m][2] .. "ModeSep#" .. sep_r
         return current_mode .. mode_sep1 .. "%#ST_EmptySpace#" .. sep_r
       end,
+    },
+  },
+  mason = {
+    cmd = true,
+    pkgs = {
+      "lua-language-server",
+      "stylua", --lua
+      "html-lsp",
+      "css-lsp",
+      "prettier", --html, css
+      "clangd",
+      "clang-format", --cpp
+      "gopls", --go
+      "pyright", --python
+      "rust-analyzer", --rust
     },
   },
 }
