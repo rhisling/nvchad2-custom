@@ -16,6 +16,31 @@ M.base46 = {
       fg = "white",
       bg = "none",
     },
+    -- For brackets
+    ["@punctuation.bracket"] = { fg = "cyan" },
+    ["@identifier"] = { fg = "green" },
+    ["@module"] = { fg = "white" },
+    ["@namespace.cpp"] = { fg = "nord_blue" },
+    ["@constant"] = { fg = "yellow" },
+    ["@constant.macro"] = { fg = "pink" },
+    ["@Statement"] = { fg = "pink" },
+    ["@string.regexp"] = { fg = "pink" },
+    ["@character"] = { fg = "white" },
+    ["@variable.builtin"] = {
+      fg = "white",
+    },
+    ["@operator"] = { fg = "cyan" },
+    ["@property"] = { fg = "nord_blue" },
+
+    ["@variable.parameter"] = {
+      fg = "white",
+    },
+    ["@variable.member"] = { fg = "white" },
+    ["@variable.member.key"] = { fg = "orange" },
+    ["@punctuation.delimiter"] = { fg = "white" },
+    -- For the '::' operator (often used for scope resolution or namespace separators)
+    ["@punctuation.special"] = { fg = "white" },
+    Identifier = { fg = "nord_blue" },
   },
   transparency = true,
 }
