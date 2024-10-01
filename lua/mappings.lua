@@ -45,7 +45,7 @@ vim.api.nvim_set_keymap(
 map({ "n", "v", "i", "t" }, "<C-b>", function()
   require("nvchad.term").runner {
     id = "RunAndBuildTerminal",
-    pos = "sp",
+    pos = "vsp",
     cmd = function()
       local file = vim.fn.expand "%" --returns absolute path
       local sfile = vim.fn.expand "%:r" -- returns absolute path without extension
