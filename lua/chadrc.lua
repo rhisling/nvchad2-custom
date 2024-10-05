@@ -49,7 +49,7 @@ M.base46 = {
   transparency = true,
 }
 
-local asciiArt = require("configs.ascii").charizard
+local asciiArt = require("configs.ascii").haunter
 
 -- Creating the header table with the ASCII art
 local header = {}
