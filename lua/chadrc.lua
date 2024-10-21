@@ -66,7 +66,7 @@ local separators = sep_icons[sep_style]
 local sep_r = separators["right"]
 
 M.nvdash = {
-  load_on_startup = true,
+  load_on_startup = false,
   header = header,
   buttons = {
     { txt = "  Find File", keys = "Spc f f", cmd = "Telescope find_files" },
