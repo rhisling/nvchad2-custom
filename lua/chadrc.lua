@@ -140,6 +140,7 @@ M.mason = {
     "clang-format", --cpp
     "gopls", --go
     "pyright", --python
+    "ruff", -- python
     "rust-analyzer", --rust
   },
 }
